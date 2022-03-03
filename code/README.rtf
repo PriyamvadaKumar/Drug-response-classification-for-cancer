@@ -1,0 +1,64 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww25260\viewh14660\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 This text file contains brief description of all files within \'93code\'94 folder\
+\
+Please NOTE : please try all possible input files for code files. \
+\
+1)merging_datasets.ipynb- merging dataset from 2 papers - i.e, cmlh dataset with clinical , driver , evolutionary features and drug response dataset on the basis of TCGA ids. Outputs merged brca_dfs_drug_file \
+\
+2) Feature_filtering.ipynb - taking merged dataset and removing irrelevant columns (from drug paper). Outputs brca_dfs_drug_data\
+\
+3)drug_selection- creating separate files out of merged dataset created in feature_filtering.ipynb file based on different drugs . Outputs brac_dfs_pac, lung_dfs_car etc\
+\
+4)Classification_wilcoxon_corr - binary classification of drug response with 5 models using GridSearchCV with wilcoxon ranksum test + correlation filtering as feature selection method .\
+\
+5)Classification_ANOVA- binary classification of drug response with 5 models using GridSearchCV with ANOVA f test as feature selection method .\
+\
+6)Classifcation_selectKbest-   binary classification of drug response with 5 models using GridSearchCV with selectKbest as feature selection method .\
+\
+\
+
+\f1\b Within Datasets folder :
+\f0\b0 \
+\
+1)brca_dfs_drug_file : contains merged dataset on \'93TCGA ID\'94 containing information & features from the datasets of both paper for breast cancer \
+\
+2)brca_dfs_drug_data : contains output from brca_dfs_drug_file (in feauture_filtering.ipynb) after removal of all irrelevant features from drug paper \
+\
+3)lung_dfs_drug_file : contains merged dataset on \'93TCGA ID\'94 containing information & features from the datasets of both paper for lung cancer \
+\
+4)lung_dfs_drug_data : contains output from lung_dfs_drug_file  (in feauture_filtering.ipynb) after removal of all irrelevant features from drug paper \
+\
+5) brca_dfs_cylo - contains output from drug_selection.ipynb - only cyclophosphamide samples\
+\
+6)brca_dfs_doce- contains output from drug_selection.ipynb - only docetaxel samples\
+\
+7)brca_dfs_doxo-  contains output from drug_selection.ipynb - only doxorubicin samples\
+\
+8) brca_dfs_pac- contains output from drug_selection.ipynb - only paclitaxel samples\
+\
+9) lung_dfs_car- contains output from drug_selection.ipynb - only carboplatin samples\
+\
+10) lung_dfs_cis- contains output from drug_selection.ipynb - only cisplatin samples\
+\
+\
+\
+
+\f1\b Within dataset folder there is \'93original_datasets_from_papers\'94:
+\f0\b0 \
+\
+1)BRCA_drug.xlsx- contains drug sample info from \'93\cf2 \expnd0\expndtw0\kerning0
+Evaluating the molecule-based prediction of clinical drug responses in cancer\'94 paper for breast cancer\
+\
+2)lung_drug.xlsx - \cf0 \kerning1\expnd0\expndtw0 contains drug sample info from \'93\cf2 \expnd0\expndtw0\kerning0
+Evaluating the molecule-based prediction of clinical drug responses in cancer\'94 paper for lung cancer \
+\
+3) tcga-brca-dfs, tags-brca-os, tcgs-lung-dfs , tcga-lung-os- contains Cmlh data from \'93Assessing the contribution of tumor mutational phenotypes to cancer progression risk\'94 paper \
+\
+\cf0 \kerning1\expnd0\expndtw0 \
+}
